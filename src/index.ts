@@ -21,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/api/waiting', waitingRouter);
-// app.use('/api/waiting-status', waitingStatusRouter);
 app.use('/api/manager', managerRouter);
 app.use('/api/organization', organRouter);
 
