@@ -2,14 +2,6 @@ import { Router } from "express";
 
 export const managerRouter = Router();
 
-// 관리자 로그인
-// /api/manager/sign-in
-managerRouter.post('/sign-in', (req, res) => {
-  res.json({
-
-  })
-});
-
 // 관리자 입장중(PENDING) => 대기중(WAITING) 변경
 // /api/manager/restoration/${바꾸려는 waiting ID}
 managerRouter.patch('/restoration/:id', (req, res) => {
