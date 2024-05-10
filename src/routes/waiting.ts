@@ -14,7 +14,7 @@ waitingRouter.post('/', (req, res) => {
 
 // 대기 삭제
 // /api/waiting/${waitingId}
-waitingRouter.delete(`/:id}`, (req, res) => {
+waitingRouter.delete(`/:id`, (req, res) => {
   res.json({
     code: 'COM-000',
     message: 'ok',
@@ -24,14 +24,20 @@ waitingRouter.delete(`/:id}`, (req, res) => {
 
 // 대기 현황 조회
 // /api/waiting/${waitingId}
-waitingRouter.get(`/:id}`, (req, res) => {
+waitingRouter.get(`/:id`, (req, res) => {
   res.json({
-    code: 'COM-000',
-    message: 'ok',
-    data: {
+    "code": "COM-000",
+    "data": {
+      "waitingStatus": "WAITING",
       "currentWaitingNumber": 1,
-      "expactWaitingTime": 0,
-      "headCount": 4
+      "expectWaitingTime": 0,
+      "headCount": 12
     }
+  })
+})
+
+waitingRouter.get('/qr/:id', (req, res) => {
+  res.json({
+    imgUrl: ""
   })
 })
