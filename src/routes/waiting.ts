@@ -27,7 +27,7 @@ waitingRouter.delete(`/:id`, (req, res) => {
   });
 });
 
-// 대기 현황 조회
+// 대기 현황 조회 - WAITNG
 // /api/waiting/${waitingId}
 waitingRouter.get(`/:id`, (req, res) => {
   const id = req.params;
