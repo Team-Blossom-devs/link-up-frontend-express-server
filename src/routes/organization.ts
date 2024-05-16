@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 export const organRouter = Router();
 
@@ -8,31 +8,31 @@ organRouter.get('/', (req, res) => {
   const name = req.query.searchTerm;
   console.log(name);
   res.json({
-    "code": "COM-000",
-    "data": {
-      "currentPageElementCount": 1,
-      "currentPage": 1,
-      "totalPages": 1,
-      "organizationDtoList": [
+    code: 'COM-000',
+    data: {
+      currentPageElementCount: 3,
+      currentPage: 1,
+      totalPages: 5,
+      organizationDtoList: [
         {
-          "id": 1,
-          "name": "어쩌구 주점1",
-          "location": "덕문관",
-          "tableCount": 12
-        }
-      ]
-    }
-  })
-})
+          id: 1,
+          name: '어쩌구 주점1',
+          location: '덕문관',
+          tableCount: 12,
+        },
+      ],
+    },
+  });
+});
 
 organRouter.get('/:id', (req, res) => {
   res.json({
-    "code": "COM-000",
-    "data": {
-      "name": '컴퓨터공학과',
-      "introduce": '안녕하세요~~',
-      "location": '덕문관',
-      "tableCount": 12
-    }
-  })
-})
+    code: 'COM-000',
+    data: {
+      name: '컴퓨터공학과',
+      introduce: '안녕하세요~~',
+      location: '덕문관',
+      tableCount: 12,
+    },
+  });
+});
